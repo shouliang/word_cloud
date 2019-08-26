@@ -10,7 +10,7 @@ from PIL import Image
 import numpy as np
 from lxml import etree
 
-
+# 构造请求的头图信息
 headers = {
     'Referer'	: 'http://music.163.com',
     'Host'	 	: 'music.163.com',
@@ -60,8 +60,6 @@ def create_word_cloud(f):
     plt.show()
 
 # 得到特定歌手的页面，获取其热门的前50的歌曲ID,歌曲名
-
-
 def get_songs(artist_id):
     page_url = 'https://music.163.com/artist?id=' + artist_id
     # 获取HTML
